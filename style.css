@@ -636,7 +636,7 @@ p { margin: 0.75em 0; color: var(--ink-soft); }
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
 }
 @media (max-width: 800px) {
   .context-media { grid-template-columns: 1fr; }
