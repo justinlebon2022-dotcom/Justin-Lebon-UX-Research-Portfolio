@@ -108,9 +108,9 @@ p { margin: 0.75em 0; color: var(--ink-soft); }
 .mark {
   background-image: linear-gradient(var(--mark) 0 0);
   background-repeat: no-repeat;
-  background-size: 100% 0.42em;
-  background-position: 0 82%;
-  padding: 0 0.08em;
+  background-size: 100% 0.1em;
+  background-position: 0 100%;
+  padding: 0 0.18em;
   font-style: normal;
 }
 
