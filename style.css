@@ -306,6 +306,25 @@ p { margin: 0.75em 0; color: var(--ink-soft); }
   font-family: var(--font-mono);
   font-size: 0.85rem;
 }
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.75rem;
+}
+.about-stats .num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ink);
+  display: block;
+}
+.about-stats .label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
 .method-list li {
   display: flex;
   justify-content: space-between;
