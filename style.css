@@ -114,6 +114,15 @@ p { margin: 0.75em 0; color: var(--ink-soft); }
   font-style: normal;
 }
 
+.meta-row .cell .v.mark {
+  background-image: none;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: var(--mark);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 /* ---------- header ---------- */
 .site-header {
   position: sticky;
