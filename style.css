@@ -407,7 +407,7 @@ p { margin: 0.75em 0; color: var(--ink-soft); }
   display: flex;
   align-items: baseline;
   gap: 0.9rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
 }
 .case-section .index {
   font-family: var(--font-mono);
