@@ -815,3 +815,163 @@ p { margin: 0.75em 0; color: var(--ink-soft); }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===========================================================
+   Case study additions: evidence cards, quotes, result callout
+   =========================================================== */
+
+.timeline.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .timeline.three { grid-template-columns: 1fr; } }
+.timeline-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin: 2.5rem 0 1.1rem;
+}
+.timeline-total {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink);
+  margin: 1.75rem 0 0;
+}
+
+.sub-note {
+  margin: 0 0 1.5rem;
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.finding-stack { display: grid; gap: 1.75rem; }
+.finding-card {
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+}
+.finding-card .fc-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink);
+  padding: 0.95rem 1.75rem;
+  border-bottom: 1px solid var(--line);
+  margin: 0;
+}
+.finding-card .finding { border-bottom: 1px solid var(--line); }
+.finding-card .finding:last-child { border-bottom: none; }
+
+.evidence {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  background: var(--paper);
+}
+@media (max-width: 720px) { .evidence { flex-direction: column; align-items: stretch; } }
+.evidence figure { margin: 0; flex: 0 0 min(46%, 340px); }
+.evidence figure.narrow { flex-basis: min(34%, 240px); }
+.evidence figure img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 16px 32px -20px rgba(28, 35, 33, 0.35);
+}
+.evidence figcaption {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.7rem;
+  line-height: 1.4;
+}
+.evidence figcaption .tag-impact {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--signal);
+  background: var(--signal-soft);
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  margin-right: 0.45em;
+  white-space: nowrap;
+}
+.evidence blockquote {
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--mark);
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  line-height: 1.45;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+  padding: 2rem 2.25rem;
+}
+@media (max-width: 720px) { .result { grid-template-columns: 1fr; gap: 1.25rem; } }
+.result .big {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink);
+}
+.result .big small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.7rem;
+}
+.result p { margin: 0 0 0.6rem; color: var(--ink); }
+.result p.why {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--signal);
+  margin: 0 0 0.3rem;
+}
+.result p:last-child { margin-bottom: 0; }
+
+.bullet-note {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+.bullet-note li {
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  padding-left: 1.1rem;
+  position: relative;
+}
+.bullet-note li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+/* Business impact numbers: thin gold underline instead of a highlighter bar */
+.result .big .mark {
+  background-size: 100% 0.07em;
+  background-position: 0 85%;
+  padding: 0 0.05em;
+}
+
+/* Evidence with no quote: centre the picture and its caption */
+.evidence.solo { justify-content: center; }
+.evidence.solo figure { text-align: center; }
+.evidence.solo figcaption { text-align: center; }
